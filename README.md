@@ -5,7 +5,7 @@ A Geant4 (C++) model of the geometry and materials of a six-plate nuclear-emulsi
 ## Overview
 
 The model reproduces the layered structure of a compact emulsion detector: six double-sided emulsion plates, each sealed in a polyethylene bag, pressed between two rubber mats inside a stainless-steel frame. All dimensions and materials are defined in [`src/DetectorConstruction.cc`](src/DetectorConstruction.cc).
-
+![Geometry](det1.png)
 ## Scientific motivation
 
 Muography uses the attenuation of atmospheric muons to image the interior of large objects. Nuclear emulsions are compact, passive, power-free detectors in which charged-particle tracks become visible as chains of silver grains after chemical development. A Monte Carlo model of the detector is a prerequisite for studying energy deposition and track registration in its different components. This repository covers the first step: a faithful geometric and material model.
@@ -32,6 +32,8 @@ Layer stack along z (not to scale), as built in code:
 
  one packet (0.0373 cm) = PE 0.004 | emulsion 0.0044 | plastic base 0.0205 | emulsion 0.0044 | PE 0.004
 ```
+
+![Geometry](det2.png)
 
 Notes on the construction:
 
@@ -82,6 +84,7 @@ Batch mode, using one of the example macros:
 ```bash
 ./exampleB1 run1.mac
 ```
+![Energy deposit in steel](energy_deposit.png)
 
 ## References
 
