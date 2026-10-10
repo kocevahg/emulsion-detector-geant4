@@ -47,6 +47,42 @@ Notes on the construction:
 - [Geant4](https://geant4.web.cern.ch/) — developed with **11.3.p02** (the version used for the author's build); other 11.x versions are expected to work but have not been tested
 - CMake ≥ 3.16
 
+## Repository structure
+
+```
+.
+├── CMakeLists.txt
+├── exampleB1.cc            # main program (from Geant4 example B1)
+├── include/                # headers (from example B1)
+├── src/
+│   ├── DetectorConstruction.cc   # <- the detector model (project-specific)
+│   ├── PrimaryGeneratorAction.cc # default example generator (gamma, 6 MeV, +z)
+│   ├── RunAction.cc              # example B1, with a null-pointer guard (see below)
+│   ├── EventAction.cc
+│   ├── SteppingAction.cc
+│   └── ActionInitialization.cc
+└── macros/                 # init_vis.mac, vis.mac, run1.mac, run2.mac (from example B1)
+```
+
+## Build and run
+
+Requires a working Geant4 installation with its environment set (`source <geant4-install>/bin/geant4.sh`).
+
+```bash
+cmake -S . -B build
+cmake --build build -j
+cd build
+./exampleB1            # interactive mode: reads init_vis.mac, opens the viewer
+```
+
+To inspect the geometry, run the executable without arguments and use the viewer opened by `init_vis.mac`. `vis.mac` is the standard B1 visualisation macro.
+
+Batch mode, using one of the example macros:
+
+```bash
+./exampleB1 run1.mac
+```
+
 ## References
 
 The references below are taken from the original course report and were not re-verified.
