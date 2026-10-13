@@ -88,8 +88,6 @@ Batch mode, using one of the example macros:
 
 ## References
 
-The references below are taken from the original course report and were not re-verified.
-
 1. S. Cecchini, M. Spurio, *Atmospheric muons: experimental aspects*, Geoscientific Instrumentation, Methods and Data Systems **1**, 185–196 (2012).
 2. A. Nishio et al., *Development of Nuclear Emulsion Detector for Muon Radiography*, Physics Procedia **80**, 74–77 (2015).
 3. A. B. Aleksandrov et al., *Muography of the cave church of the Holy Dormition Pskov-Pechory Monastery*.
